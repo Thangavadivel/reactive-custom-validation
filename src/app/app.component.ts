@@ -33,5 +33,6 @@ export class AppComponent {
   onSubmit(){
     // console.log(this.form.controls.zip);
     this.form.markAsTouched();
+    console.log("thanga git changes check")
   }
 }
