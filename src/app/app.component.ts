@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators} from '@angular/forms';
-import {zipcodeValidator, passValidator, emailDomainValidator, alphaNumericValidator , mobileNoValidator} from './validator';
+import {zipcodeValidator, passValidator, emailDomainValidator, alphaNumericValidator , mobileNoValidator, dobValidator} from './validator';
 
 @Component({
   selector: 'app-root',
@@ -19,7 +19,8 @@ export class AppComponent {
       zip: ['', zipcodeValidator],
       email: ['', emailDomainValidator],
       alnum: ['', alphaNumericValidator],
-      mobileNo: ['', mobileNoValidator]
+      mobileNo: ['', mobileNoValidator],
+      dob: ['', dobValidator]
     });
 
 

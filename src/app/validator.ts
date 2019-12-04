@@ -52,7 +52,7 @@ export function emailDomainValidator(control: AbstractControl): {[key: string]: 
       export function alphaNumericValidator(control: AbstractControl) {
 
         if (control && (control.value !== null || control.value !== undefined)) {
-            const regex = new RegExp('[0-9]');
+            const regex = new RegExp('^[0-9]+$');
     console.log(regex.test(control.value))
             if (!regex.test(control.value)) {
                 return {
@@ -74,6 +74,22 @@ export function emailDomainValidator(control: AbstractControl): {[key: string]: 
             if (!regex.test(control.value)) {
                 return {
                     mobNo: true
+                };
+            }
+        }
+    
+        return null;
+    }
+
+    export function dobValidator(control: AbstractControl) {
+
+        if (control && (control.value !== null || control.value !== undefined)) {
+            // const regex = new RegExp('[0-9]{10}');
+            const regex = new RegExp('^[0-9]{2}\\/[0-9]{2}\\/[0-9]{4}$');
+  
+            if (!regex.test(control.value)) {
+                return {
+                    dob1: true
                 };
             }
         }

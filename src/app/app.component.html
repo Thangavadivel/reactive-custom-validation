@@ -52,7 +52,7 @@
 
                    <div class="form-group">
                       <label for="">Numbers</label>
-                      <input  formControlName="alnum" type="text" class="form-control" id="alnum" placeholder="Enter email">
+                      <input  formControlName="alnum" type="text" class="form-control" id="alnum" placeholder="Enter Numbers">
                       <span *ngIf="form.controls.alnum.invalid && (form.controls.alnum.dirty || form.controls.alnum.touched)">
                       <!-- <i class="fa fa-check-circle" style="color:green;" *ngIf="form.controls.alnum.valid"></i> -->
                       <i class="fa fa-times-circle" style="color:firebrick;" *ngIf="form.controls.alnum.errors.number1">
@@ -70,6 +70,16 @@
                       </i>
                       </span>
                    </div>
+
+                   <div class="form-group">
+                     <label for="">Date Of Birth:</label>
+                     <input  formControlName="dob" type="text" class="form-control" id="dob" placeholder="01/01/1990">
+                     <span *ngIf="form.controls.dob.invalid && (form.controls.dob.dirty || form.controls.dob.touched)">
+                     <i class="fa fa-times-circle" style="color:firebrick;" *ngIf="form.controls.dob.errors.dob1">
+                     Please Enter valid Date Format
+                     </i>
+                     </span>
+                  </div>
                
 
 
