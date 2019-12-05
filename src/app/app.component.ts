@@ -28,6 +28,14 @@ export class AppComponent {
     .subscribe(
       x => this.form.controls.cnfpass.updateValueAndValidity()
     )
+
+    this.form.controls.username.valueChanges.subscribe((value)=>{
+      // console.log(value.length, "the length")
+    })
+
+    this.form.valueChanges.subscribe((val)=>{
+console.log(JSON.stringify(val))
+    })
   }
 
 
